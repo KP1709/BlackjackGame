@@ -2,6 +2,7 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardEl = document.getElementById("card-el")
 let playerEl = document.getElementById("player-el")
+let startGameButton = document.getElementById("start-game")
 
 // Specific for ID tags in html using #<id-name>
 // .<class-name>
@@ -11,6 +12,11 @@ let message = ""
 let hasBlackJack = false
 let isAlive = true
 let cards = []
+
+// Button disappears off screen after pressing (to start game)
+startGameButton.addEventListener('click', () => {
+    startGameButton.remove()
+})
 
 function getRandomCard(){
     value = Math.floor(Math.random() * (11 - 1) + 1)
@@ -42,10 +48,12 @@ function renderGame(){
     else if(sum === 21){
         hasBlackJack = true
         message = "You won - you've got Blackjack!"
+        restart() // Restart button appears
     }
     else{
         isAlive = false
         message = "You're out of the game"
+        restart() // Restart button appears
     }
 
     messageEl.textContent = message  
@@ -60,8 +68,26 @@ function newCard(){
         cards.push(newCard)
         renderGame()
     }
-
 }
+
+
+function restart(){
+    if ((isAlive && !hasBlackJack) || (!isAlive && !hasBlackJack)){
+        // Creating start button and giving attributes
+        let restartButton = document.createElement('button')
+        restartButton.innerText='RESTART GAME'
+        restartButton.id='restart-el'
+        
+        // Giving action when pressed - refresh page
+        restartButton.addEventListener('click',() =>{
+            location.reload()
+        })
+        
+        // Add element to the page
+        document.body.appendChild(restartButton)
+    }
+}
+
 
 
 
