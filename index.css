@@ -1,0 +1,36 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align:center;  
+    /* background-image: url('greenTable.jpg');    */
+    background-color: rgb(51, 105, 51);       /*Loading background-image takes time*/
+    background-size: cover;   
+    color: white;
+    font-style: bold;
+}
+
+h1 {
+    color: rgb(218, 165, 32);
+    font-size: 40px;
+}
+
+#message-el, #sum-el, #card-el{
+    font-size: 35px;
+}
+
+#message-el {
+    font-style: italic;   
+}
+
+button{
+    margin: 2px 0px;
+    font-size: 15px;
+    color: #016f32;
+    width: 150px;
+    padding: 10px 10px;
+    background:goldenrod;
+    font-weight:bold;
+    inline-size: 200px;
+    border:none;
+    border-radius: 2px;
+}
+
