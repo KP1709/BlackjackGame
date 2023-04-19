@@ -73,7 +73,7 @@ function newCard(){
 
 
 function restart(){
-    if ((isAlive && !hasBlackJack) || (!isAlive && !hasBlackJack)){
+    if ((isAlive && hasBlackJack) || (!isAlive && !hasBlackJack)){
         newCardButton.remove() // Remove new card button from screen
         // Creating start button and giving attributes
         let restartButton = document.createElement('button')
