@@ -3,6 +3,7 @@ let sumEl = document.getElementById("sum-el")
 let cardEl = document.getElementById("card-el")
 let playerEl = document.getElementById("player-el")
 let startGameButton = document.getElementById("start-game")
+let newCardButton = document.getElementById("new-card")
 
 // Specific for ID tags in html using #<id-name>
 // .<class-name>
@@ -73,6 +74,7 @@ function newCard(){
 
 function restart(){
     if ((isAlive && !hasBlackJack) || (!isAlive && !hasBlackJack)){
+        newCardButton.remove() // Remove new card button from screen
         // Creating start button and giving attributes
         let restartButton = document.createElement('button')
         restartButton.innerText='RESTART GAME'
@@ -87,11 +89,3 @@ function restart(){
         document.body.appendChild(restartButton)
     }
 }
-
-
-
-
-
-
-
-
