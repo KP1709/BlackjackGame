@@ -70,16 +70,35 @@ function renderGame(){
     sumEl.textContent = "Sum: " + sum
 }
 
-function newCard(){
-    if (isAlive === true && hasBlackJack === false){
-        console.log("Drawing out a new card")
-        let newCard = getRandomCard()
-        sum = sum + newCard
-        cards.push(newCard)
-        renderGame()
-    }
+// Counts the number of that value stored in the array
+function valueCount(newCard){
+    count = cards.filter(value => value  == newCard) // Filter by card selected
+    filteredList = count.length + 1 // Add 1 to get correct length
+    return filteredList // return value to use in newCard()
 }
 
+// Function to recall newCard() to get another value to test 
+function getNewCard(){
+    newCard()
+}
+
+function newCard(){
+    if (isAlive === true && hasBlackJack === false){
+        let newCard = getRandomCard()
+        let numberCount = valueCount(newCard) // Count number of values used in game
+        if ((numberCount > 4) && (newCard != 10)){ // In a deck there are 4 of each value
+            getNewCard()
+        }
+        else if ((newCard === 10)&&(numberCount > 13)){ // In a deck there are 12 cards which equal 10
+            getNewCard()
+        }
+        else{
+            sum = sum + newCard // Runs this section if value is valid
+            cards.push(newCard)
+            renderGame()
+        }
+    }
+}
 
 function restart(){
     if ((isAlive && hasBlackJack) || (!isAlive && !hasBlackJack)){
