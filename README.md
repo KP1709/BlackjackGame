@@ -1,7 +1,7 @@
 # BlackjackGame
 
 ## 🍼 Introduction    
-This blackjack game was created by following a tutorial created by Per Harold Borgen (CEO of Scrimba). 
+This blackjack game was created by following a tutorial created by Per Harold Borgen (CEO of Scrimba).   
 The tutorial was posted by FreeCodeCamp.  
 Per's tutorial further taught me how to use Javascript with HTML and CSS to add functionality to a web page.  
 After learning and coding the game, I improved the game and took it further.
