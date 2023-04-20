@@ -12,4 +12,4 @@ After learning and coding the game, I improved the game and took it further.
 - 'restart game' button when pressed, reloads the page so a new game can start.  
 - 'new card' button does not appear until the 'start game' button is pressed and then swaps place with the button.   
 - Capped the number of time a value can be generated (explained in commit).  
-  - It is extremely unlikely for more than 4 tens, jacks, queens and kings to be picked. (User would be out of the game after three 'ten' cards.)  
+  - It is extremely unlikely for more than 4 tens, jacks, queens and kings to be picked. (User would be out of the game after three of these cards are picked.)  
