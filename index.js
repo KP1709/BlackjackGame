@@ -3,7 +3,10 @@ let sumEl = document.getElementById("sum-el")
 let cardEl = document.getElementById("card-el")
 let playerEl = document.getElementById("player-el")
 let startGameButton = document.getElementById("start-game")
-let newCardButton = document.getElementById("new-card")
+
+let newCardButton = document.createElement('button')
+newCardButton.innerText='NEW CARD'
+newCardButton.id='new-card'
 
 // Specific for ID tags in html using #<id-name>
 // .<class-name>
@@ -17,6 +20,7 @@ let cards = []
 // Button disappears off screen after pressing (to start game)
 startGameButton.addEventListener('click', () => {
     startGameButton.remove()
+    document.body.appendChild(newCardButton)
 })
 
 function getRandomCard(){
