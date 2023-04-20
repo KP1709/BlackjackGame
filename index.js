@@ -23,6 +23,11 @@ startGameButton.addEventListener('click', () => {
     document.body.appendChild(newCardButton)
 })
 
+// Button functionality
+newCardButton.addEventListener('click', () =>{
+    newCard()
+})
+
 function getRandomCard(){
     value = Math.floor(Math.random() * (11 - 1) + 1)
     if(value > 10){
