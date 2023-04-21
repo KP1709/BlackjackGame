@@ -20,7 +20,6 @@ let cards = []
 // Button disappears off screen after pressing (to start game)
 startGameButton.addEventListener('click', () => {
     startGameButton.remove()
-    document.body.appendChild(newCardButton)
 })
 
 // Button functionality
@@ -40,6 +39,7 @@ function getRandomCard(){
 }
 
 function startGame(){
+    document.body.appendChild(newCardButton)
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
     cards = [firstCard,secondCard]
