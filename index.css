@@ -1,3 +1,8 @@
+:root{
+    --goldenrod: rgb(218, 165, 32); 
+}
+
+
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align:center;  
@@ -9,7 +14,7 @@ body {
 }
 
 h1 {
-    color: rgb(218, 165, 32);
+    color: var(--goldenrod);
     font-size: 40px;
 }
 
@@ -27,7 +32,7 @@ button{
     color: #016f32;
     width: 150px;
     padding: 10px 10px;
-    background:goldenrod;
+    background:var(--goldenrod);
     font-weight:bold;
     inline-size: 200px;
     border:none;
